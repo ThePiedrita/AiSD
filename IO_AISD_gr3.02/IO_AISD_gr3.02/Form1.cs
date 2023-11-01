@@ -1,3 +1,4 @@
+using System.Globalization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IO_AISD_gr3._02
@@ -35,7 +36,7 @@ namespace IO_AISD_gr3._02
 
         private void bubbleSort_Click(object sender, EventArgs e)
         {
-            string wynik = naString(sortBubble(Convert(wejscie.Text)));
+            wyjscie.Text = naString(sortBubble(Convert(wejscie.Text)));
             
         }
         int[] sortBubble(int[] tab)
@@ -62,7 +63,7 @@ namespace IO_AISD_gr3._02
 
         private void selectSort_Click(object sender, EventArgs e)
         {
-
+            wyjscie.Text = naString(sortSelect(Convert(wejscie.Text)));
         }
         int[] sortSelect(int[] tab)
         {
@@ -95,12 +96,85 @@ namespace IO_AISD_gr3._02
 
         private void wyjscie_Click(object sender, EventArgs e)
         {
-            wyjscie.Text = naString(sortBubble(Convert(wejscie.Text)));
+            
         }
 
         private void insertSort_Click(object sender, EventArgs e)
         {
+            wyjscie.Text = naString(sortInsert(Convert(wejscie.Text)));
+        }
+
+        int[] sortInsert(int[] tab)
+        {
+            int temp;
+            for (int i = 1; i < tab.Length; i++)
+            {
+                int k = i;
+                for(int j = i-1; j >= 0; j--)
+                {
+                    if(tab[k] < tab[j])
+                    {
+                        temp=tab[j];
+                        tab[j] = tab[k];
+                        tab[k] = temp;
+                        k--;
+                    }
+                }
+            }
+            return tab;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
+
+        private void mergeSort_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void quickSort_Click(object sender, EventArgs e)
+        {
+            wyjscie.Text = wyjscie.Text = naString(sortQuick(Convert(wejscie.Text),0,Convert(wejscie.Text).Length-1));
+        }
+        int[] sortQuick(int[] tab, int leftIndex, int rightIndex)
+        {
+            var i = leftIndex;
+            var j = rightIndex;
+            var pivot = tab[leftIndex];
+            while (i <= j)
+            {
+                while (tab[i] < pivot)
+                {
+                    i++;
+                }
+
+                while (tab[j] > pivot)
+                {
+                    j--;
+                }
+                if (i <= j)
+                {
+                    int temp = tab[i];
+                    tab[i] = tab[j];
+                    tab[j] = temp;
+                    i++;
+                    j--;
+                }
+            }
+
+            if (leftIndex < j)
+                sortQuick(tab, leftIndex, j);
+            if (i < rightIndex)
+                sortQuick(tab, i, rightIndex);
+            return tab;
+        }
+
+        //int[] sortMerge(int[] tab)
+
+
+
     }
 }
