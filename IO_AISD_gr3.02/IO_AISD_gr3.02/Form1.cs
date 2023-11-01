@@ -12,7 +12,23 @@ namespace IO_AISD_gr3._02
 
         private void button6_Click(object sender, EventArgs e)
         {
+            if(tryb.Checked)
+            {
 
+                genTab.Text = naString(randomTab((int)numUd.Value));
+            }
+
+        }
+        int[] randomTab(int n)
+        {
+            var rand = new Random();
+            var maxNumber = 10000;
+            int[] tab = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                tab[i] = rand.Next(maxNumber);
+            }
+            return tab;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -25,7 +41,7 @@ namespace IO_AISD_gr3._02
             
             
         }
-        int[] Convert(String napis)
+        int[] convertSpace(String napis)
         {
             var liczbyS = napis.Trim().Split(' ');
             var liczby = new int[liczbyS.Length];
@@ -33,10 +49,26 @@ namespace IO_AISD_gr3._02
                 liczby[i] = int.Parse(liczbyS[i].Trim());
             return liczby;
         }
+        int[] Convert(String napis)
+        {
+            var liczbyS = napis.Trim().Split(',');
+            var liczby = new int[liczbyS.Length];
+            for (int i = 0; i < liczbyS.Length; i++)
+                liczby[i] = int.Parse(liczbyS[i].Trim());
+            return liczby;
+        }
 
         private void bubbleSort_Click(object sender, EventArgs e)
         {
-            wyjscie.Text = naString(sortBubble(Convert(wejscie.Text)));
+            if (tryb.Checked)
+            {
+                wyjscie.Text = naString(sortBubble(Convert(genTab.Text)));
+            }
+            else
+            {
+                wyjscie.Text = naString(sortBubble(convertSpace(wejscie.Text)));
+            }
+            
             
         }
         int[] sortBubble(int[] tab)
@@ -63,7 +95,15 @@ namespace IO_AISD_gr3._02
 
         private void selectSort_Click(object sender, EventArgs e)
         {
-            wyjscie.Text = naString(sortSelect(Convert(wejscie.Text)));
+            if (tryb.Checked)
+            {
+                wyjscie.Text = naString(sortSelect(Convert(genTab.Text)));
+            }
+            else
+            {
+                wyjscie.Text = naString(sortSelect(convertSpace(wejscie.Text)));
+            }
+            
         }
         int[] sortSelect(int[] tab)
         {
@@ -101,7 +141,15 @@ namespace IO_AISD_gr3._02
 
         private void insertSort_Click(object sender, EventArgs e)
         {
-            wyjscie.Text = naString(sortInsert(Convert(wejscie.Text)));
+            if (tryb.Checked)
+            {
+                wyjscie.Text = naString(sortInsert(Convert(genTab.Text)));
+            }
+            else
+            {
+                wyjscie.Text = naString(sortInsert(convertSpace(wejscie.Text)));
+            }
+               
         }
 
         int[] sortInsert(int[] tab)
@@ -131,13 +179,74 @@ namespace IO_AISD_gr3._02
 
         private void mergeSort_Click(object sender, EventArgs e)
         {
+            if(tryb.Checked)
+            {
+                wyjscie.Text = naString(sortMerge(Convert(genTab.Text), 0, Convert(genTab.Text).Length - 1));
+            }
+            else
+            {
+                wyjscie.Text = naString(sortMerge(convertSpace(wejscie.Text), 0, convertSpace(wejscie.Text).Length - 1));
+            }
             
-            
+
+        }
+        int[] sortMerge(int[] tab, int left, int right)
+        {
+            if (left < right)
+            {
+                int middle = left + (right - left) / 2;
+                sortMerge(tab, left, middle);
+                sortMerge(tab, middle + 1, right);
+                mergeTab(tab, left, middle, right);
+            }
+            return tab;
+        }
+        void mergeTab(int[] tab, int left, int middle, int right)
+        {
+            var leftTabLength = middle - left + 1;
+            var rightTabLength = right - middle;
+            var leftTempTab = new int[leftTabLength];
+            var rightTempTab = new int[rightTabLength];
+            int i, j;
+            for (i = 0; i < leftTabLength; ++i)
+                leftTempTab[i] = tab[left + i];
+            for (j = 0; j < rightTabLength; ++j)
+                rightTempTab[j] = tab[middle + 1 + j];
+            i = 0;
+            j = 0;
+            int k = left;
+            while (i < leftTabLength && j < rightTabLength)
+            {
+                if (leftTempTab[i] <= rightTempTab[j])
+                {
+                    tab[k++] = leftTempTab[i++];
+                }
+                else
+                {
+                    tab[k++] = rightTempTab[j++];
+                }
+            }
+            while (i < leftTabLength)
+            {
+                tab[k++] = leftTempTab[i++];
+            }
+            while (j < rightTabLength)
+            {
+                tab[k++] = rightTempTab[j++];
+            }
         }
 
         private void quickSort_Click(object sender, EventArgs e)
         {
-            wyjscie.Text = wyjscie.Text = naString(sortQuick(Convert(wejscie.Text),0,Convert(wejscie.Text).Length-1));
+            if (tryb.Checked)
+            {
+                wyjscie.Text = naString(sortQuick(Convert(genTab.Text), 0, Convert(genTab.Text).Length - 1));
+            }
+            else
+            {
+                wyjscie.Text = naString(sortQuick(convertSpace(wejscie.Text),0, convertSpace(wejscie.Text).Length-1));
+            }
+            
         }
         int[] sortQuick(int[] tab, int leftIndex, int rightIndex)
         {
@@ -172,9 +281,19 @@ namespace IO_AISD_gr3._02
             return tab;
         }
 
-        //int[] sortMerge(int[] tab)
+        private void tryb_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void numUd_ValueChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void czas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,15 +41,22 @@
             this.labelCzas = new System.Windows.Forms.Label();
             this.czas = new System.Windows.Forms.Label();
             this.posortowanie = new System.Windows.Forms.Label();
+            this.genTab = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numUd)).BeginInit();
             this.SuspendLayout();
             // 
             // numUd
             // 
             this.numUd.Location = new System.Drawing.Point(578, 131);
+            this.numUd.Maximum = new decimal(new int[] {
+            2000000,
+            0,
+            0,
+            0});
             this.numUd.Name = "numUd";
             this.numUd.Size = new System.Drawing.Size(150, 27);
             this.numUd.TabIndex = 0;
+            this.numUd.ValueChanged += new System.EventHandler(this.numUd_ValueChanged);
             // 
             // tryb
             // 
@@ -59,6 +66,7 @@
             this.tryb.Size = new System.Drawing.Size(18, 17);
             this.tryb.TabIndex = 1;
             this.tryb.UseVisualStyleBackColor = true;
+            this.tryb.CheckedChanged += new System.EventHandler(this.tryb_CheckedChanged);
             // 
             // bubbleSort
             // 
@@ -153,9 +161,10 @@
             this.czas.AutoSize = true;
             this.czas.Location = new System.Drawing.Point(643, 281);
             this.czas.Name = "czas";
-            this.czas.Size = new System.Drawing.Size(50, 20);
+            this.czas.Size = new System.Drawing.Size(39, 20);
             this.czas.TabIndex = 11;
-            this.czas.Text = "label3";
+            this.czas.Text = "..........";
+            this.czas.Click += new System.EventHandler(this.czas_Click);
             // 
             // posortowanie
             // 
@@ -166,11 +175,21 @@
             this.posortowanie.TabIndex = 12;
             this.posortowanie.Text = "Po sortowaniu:";
             // 
+            // genTab
+            // 
+            this.genTab.AutoSize = true;
+            this.genTab.Location = new System.Drawing.Point(595, 212);
+            this.genTab.Name = "genTab";
+            this.genTab.Size = new System.Drawing.Size(30, 20);
+            this.genTab.TabIndex = 13;
+            this.genTab.Text = ".......";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 532);
+            this.Controls.Add(this.genTab);
             this.Controls.Add(this.posortowanie);
             this.Controls.Add(this.czas);
             this.Controls.Add(this.labelCzas);
@@ -208,5 +227,6 @@
         private Label labelCzas;
         private Label czas;
         private Label posortowanie;
+        private Label genTab;
     }
 }
