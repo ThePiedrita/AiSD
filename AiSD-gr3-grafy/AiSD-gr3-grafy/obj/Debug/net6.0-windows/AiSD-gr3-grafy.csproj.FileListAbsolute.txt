@@ -1,0 +1,17 @@
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\bin\Debug\net6.0-windows\AiSD-gr3-grafy.exe
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\bin\Debug\net6.0-windows\AiSD-gr3-grafy.deps.json
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\bin\Debug\net6.0-windows\AiSD-gr3-grafy.runtimeconfig.json
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\bin\Debug\net6.0-windows\AiSD-gr3-grafy.dll
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\bin\Debug\net6.0-windows\AiSD-gr3-grafy.pdb
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD_gr3_grafy.Form1.resources
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.dll
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\refint\AiSD-gr3-grafy.dll
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.pdb
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\AiSD-gr3-grafy.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\studia\AiSD\AiSD\AiSD-gr3-grafy\AiSD-gr3-grafy\obj\Debug\net6.0-windows\ref\AiSD-gr3-grafy.dll
