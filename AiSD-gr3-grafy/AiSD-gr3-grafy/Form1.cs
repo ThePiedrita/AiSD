@@ -2,7 +2,7 @@ namespace AiSD_gr3_grafy
 {
     public partial class Form1 : Form
     {
-        string wynik = "";
+        string napis = "";
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +26,9 @@ namespace AiSD_gr3_grafy
             w1.dzieci.Add(w4);
             w2.dzieci.Add(w5);
             w2.dzieci.Add(w6);
+            napis = "";
             A(w1);
+            MessageBox.Show(napis);
             
         }
         /*void A(Wêze³ w)
@@ -48,7 +50,7 @@ namespace AiSD_gr3_grafy
 
          void A(Wêze³ w)
          {
-             wynik += w.wartoœæ.ToString();
+             napis += w.wartoœæ.ToString()+" ";
              foreach (var dziecko in w.dzieci)
              {
                  A(dziecko);
