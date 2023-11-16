@@ -25,44 +25,39 @@ namespace AiSD_gr3_grafy
             w1.dzieci.Add(w4);
             w2.dzieci.Add(w5);
             w2.dzieci.Add(w6);
-            int[] tab = new int[6];
-            A(w1,tab);
-            MessageBox.Show(naString(tab));
-        }
-        void A(Wêze³ w, int[] tab)
-        {
-            tab.Append(w.wartoœæ);
-            foreach (var dziecko in w.dzieci)
-            {
-                
-                A(dziecko,tab);
-                
-            }
-            MessageBox.Show(naString(tab));
-
-        }
-        
-       /* void A(Wêze³ w)
-        {
-            MessageBox.Show(w.wartoœæ.ToString());
-            foreach (var dziecko in w.dzieci)
-            {
-
-                A(dziecko);
-
-            }
+            A(w1);
             
-
-        }*/
-        String naString(int[] tab)
-        {
-            string znak = tab[0].ToString();
-            for (int i = 1; i < tab.Length; i++)
-            {
-                znak = znak + ", " + tab[i].ToString();
-            }
-            return znak;
         }
+        void A(Wêze³ w)
+        {
+            string values = GetValues(w);
+            MessageBox.Show(values);
+        }
+
+        string GetValues(Wêze³ w)
+        {
+            string values = w.wartoœæ.ToString();
+
+            foreach (var dziecko in w.dzieci)
+            {
+                values += ", " + GetValues(dziecko);
+            }
+            return values;
+        }
+
+        /* void A(Wêze³ w)
+         {
+             MessageBox.Show(w.wartoœæ.ToString());
+             foreach (var dziecko in w.dzieci)
+             {
+
+                 A(dziecko);
+
+             }
+
+
+         }*/
+        
     }
     public class Wêze³
     {
